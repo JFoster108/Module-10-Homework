@@ -1,12 +1,14 @@
+import dotenv from "dotenv";
 const inquirer = require('inquirer');
 const { Pool } = require('pg');
 const cTable = require('console.table');
 
+dotenv.config();
 const pool = new Pool({
-  user: 'your_username',
+  user: process.env.DB_USER,
   host: 'localhost',
-  database: 'employee_db',
-  password: 'your_password',
+  database: process.env.DB_DATABASE,
+  password: process.env.DB_PASSWORD,
   port: 5432,
 });
 

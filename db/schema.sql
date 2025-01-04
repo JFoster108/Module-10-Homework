@@ -1,3 +1,7 @@
+DROP DATABASE IF EXISTS EMPLOYEE_TRACKER;
+CREATE DATABASE EMPLOYEE_TRACKER;
+
+\c EMPLOYEE_TRACKER
 CREATE TABLE department (
   id SERIAL PRIMARY KEY,
   name VARCHAR(50) NOT NULL
@@ -7,13 +11,16 @@ CREATE TABLE role (
   id SERIAL PRIMARY KEY,
   title VARCHAR(50) NOT NULL,
   salary DECIMAL NOT NULL,
-  department_id INT REFERENCES department(id)
+  department_id int not NULL,
+  CONSTRAINT FK_department FOREIGN KEY (department_id) REFERENCES department(id) ON DELETE CASCADE
 );
 
 CREATE TABLE employee (
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(50) NOT NULL,
   last_name VARCHAR(50) NOT NULL,
-  role_id INT REFERENCES role(id),
-  manager_id INT REFERENCES employee(id)
+  role_id int NOT NULL,
+  manager_id int,
+  CONSTRAINT FK_role FOREIGN KEY (role_id) REFERENCES role(id) ON DELETE CASCADE,
+  CONSTRAINT FK_manager FOREIGN KEY (manager_id) REFERENCES employee(id) ON DELETE CASCADE
 );
