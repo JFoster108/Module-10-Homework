@@ -1,13 +1,14 @@
 {
   "name": "module-10-homework",
   "version": "1.0.0",
-  "description": "This is a content management system that utilizes the command line to help track employees using Node.js, Inquirer, and PostgreSQL. This is a homework assignment for the Web Development bootcamp sponsored by UNC Chapel hill.",
+  "description": "This is a content management system that utilizes the command line to help track employees using Node.js, Inquirer, and PostgreSQL. This is a homework assignment for the Web Development bootcamp sponsored by UNC Chapel Hill.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["CMS", "Node.js", "Inquirer", "PostgreSQL", "Homework"],
+  "author": "Justice Foster",
   "license": "ISC",
   "dependencies": {
     "console.table": "^0.10.0",
