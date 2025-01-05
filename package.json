@@ -7,7 +7,13 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["CMS", "Node.js", "Inquirer", "PostgreSQL", "Homework"],
+  "keywords": [
+    "CMS",
+    "Node.js",
+    "Inquirer",
+    "PostgreSQL",
+    "Homework"
+  ],
   "author": "Justice Foster",
   "license": "ISC",
   "dependencies": {
@@ -15,5 +21,6 @@
     "dotenv": "^16.4.7",
     "inquirer": "^12.3.0",
     "pg": "^8.13.1"
-  }
+  },
+  "type": "module"
 }
