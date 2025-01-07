@@ -1,9 +1,11 @@
 import dotenv from "dotenv";
 import inquirer from "inquirer";
-import { Pool } from "pg";
+import pkg from "pg"; // Import pg as a default CommonJS module
 import cTable from "console.table";
 
 dotenv.config();
+
+const { Pool } = pkg;
 
 const pool = new Pool({
   user: process.env.DB_USER,
