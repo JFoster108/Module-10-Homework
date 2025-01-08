@@ -20,4 +20,7 @@ N/A
 
 Please refer to the LICENSE in the repository.
 
+## Demonstration Video
+
+[Watch the demonstration video](https://drive.google.com/file/d/1S3o7r2K7JJf4IuMTZcGoOm-GmzzXaEni/view)
 ---

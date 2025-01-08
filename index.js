@@ -5,6 +5,8 @@ import cTable from "console.table";
 
 dotenv.config();
 
+console.log("DATABASE", process.env.DB_DATABASE);
+
 const { Pool } = pkg;
 
 const pool = new Pool({
